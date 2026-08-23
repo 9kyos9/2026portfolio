@@ -1,0 +1,32 @@
+---
+layout: default
+title: Home
+---
+
+<section class="hero">
+  <p class="eyebrow">Portfolio 2026</p>
+  <h1>Hi, I'm {{ site.author }}.</h1>
+  <p class="lead">
+    I build things for the web. This is where I collect my projects,
+    experiments, and work. Have a look around.
+  </p>
+</section>
+
+<h2>Selected projects</h2>
+<div class="projects">
+  {% for project in site.data.projects limit: 3 %}
+    <a class="card" href="{{ project.url }}">
+      <h3>{{ project.name }}</h3>
+      <p>{{ project.description }}</p>
+      {% if project.tags %}
+      <div class="tags">
+        {% for tag in project.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+      </div>
+      {% endif %}
+    </a>
+  {% endfor %}
+</div>
+
+<p style="margin-top:20px">
+  <a href="{{ '/projects/' | relative_url }}">See all projects →</a>
+</p>

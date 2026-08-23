@@ -1,0 +1,22 @@
+---
+layout: default
+title: Projects
+permalink: /projects/
+---
+
+<h1>Projects</h1>
+<p class="lead">Everything I've been working on. Edit these in <code>_data/projects.yml</code>.</p>
+
+<div class="projects">
+  {% for project in site.data.projects %}
+    <a class="card" href="{{ project.url }}">
+      <h3>{{ project.name }}</h3>
+      <p>{{ project.description }}</p>
+      {% if project.tags %}
+      <div class="tags">
+        {% for tag in project.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+      </div>
+      {% endif %}
+    </a>
+  {% endfor %}
+</div>

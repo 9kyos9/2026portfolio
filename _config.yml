@@ -1,0 +1,36 @@
+# Site settings
+title: Eunkyo Kim
+tagline: Portfolio 2026
+description: >-
+  Personal portfolio of Eunkyo Kim — projects, work, and things I build.
+author: Eunkyo Kim
+email: kyokim994@gmail.com
+
+# Build settings
+# On GitHub Pages the site is served at https://9kyos9.github.io/2026portfolio
+url: "https://9kyos9.github.io"
+baseurl: "/2026portfolio"
+
+# Social / links (leave blank to hide)
+github_username: 9kyos9
+
+# Navigation
+nav:
+  - title: Home
+    url: /
+  - title: Projects
+    url: /projects/
+  - title: About
+    url: /about/
+
+# Jekyll
+markdown: kramdown
+permalink: pretty
+plugins:
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor

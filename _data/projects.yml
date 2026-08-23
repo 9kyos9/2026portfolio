@@ -1,0 +1,14 @@
+- name: Project One
+  description: A short one-line description of what this project is and why it matters.
+  url: "#"
+  tags: [Web, TypeScript]
+
+- name: Project Two
+  description: Another project — replace this with your own work, links, and details.
+  url: "#"
+  tags: [Design, React]
+
+- name: Project Three
+  description: A third example card. Add or remove entries in _data/projects.yml.
+  url: "#"
+  tags: [Research]
