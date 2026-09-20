@@ -1,12 +1,11 @@
-# 프로젝트 리스트
-# featured: true 인 항목은 '대표 프로젝트'로, 나머지는 '기타 프로젝트'로 표시됩니다.
+# 프로젝트 리스트. featured: true 는 홈의 Featured projects 에 노출됩니다.
 - name: Multi-Atlas Based GNN Model for Alzheimer's Disease Prediction Using rs-fMRI Data
   period: 2025.05 – 2025.08
   org: 킹스칼리지런던 · 석사 학위 프로젝트
-  description: >-
+  summary: >-
     rs-fMRI 데이터로부터 116-node 그래프를 구성하고, Multi-Atlas 기반 GCN과
     Hard Voting 앙상블을 적용하여 알츠하이머병(AD)과 정상(NC)을 분류하는 모델 개발.
-  tags: [의료데이터, GCN, 앙상블메소드]
+  stack: [의료데이터, GCN, 앙상블메소드]
   links:
     code: ""
     demo: ""
@@ -15,10 +14,10 @@
 - name: RAG 기반 소득세 문의 챗봇
   period: 2025.10 – 2025.12
   org: 개인 프로젝트
-  description: >-
+  summary: >-
     Pinecone VectorDB와 GPT-4.5 모델을 사용하여 공시된 소득세 문서를 기반으로
     질의응답이 가능한 챗봇 구현.
-  tags: [RAG, VectorDB, LLM]
+  stack: [RAG, VectorDB, LLM]
   links:
     code: ""
     demo: ""
@@ -27,10 +26,10 @@
 - name: AI 피트니스 트레이너
   period: 2023.10 – 2023.12
   org: MS AI School 3기
-  description: >-
+  summary: >-
     YOLOv8 모델을 활용한 Pose estimation으로 관절 좌표 기준 자세 평가 피드백 제공.
     6가지 운동 자세 선택부터 카메라 촬영, 피드백 음성 제공까지 수행하는 React 기반 웹 개발.
-  tags: [YOLOv8, Pose Estimation, React]
+  stack: [YOLOv8, Pose Estimation, React]
   links:
     code: ""
     demo: ""
@@ -39,11 +38,11 @@
 - name: "취도우복싱: AI 면접 준비 서비스"
   period: 2023.03 – 2023.04
   org: 프라이머 주최 Gen-AI 해커톤
-  description: >-
+  summary: >-
     OpenAI API로 사용자 입력 기반 면접 질문 리스트를 생성하고, 답변 녹음본을 STT 처리하여
     LLM이 분석한 피드백 제공. 이력·자소서 입력부터 면접 시뮬레이션, 피드백 확인까지 가능한
     iOS 애플리케이션 개발.
-  tags: [OpenAI API, STT, LLM, iOS]
+  stack: [OpenAI API, STT, LLM, iOS]
   links:
     code: ""
     demo: ""
@@ -52,10 +51,10 @@
 - name: Exposure Fusion 알고리즘 기반 HDR 영상 합성
   period: 2021.03 – 2021.06
   org: 학사 학위 프로젝트
-  description: >-
+  summary: >-
     서로 다른 노출도로 촬영된 LDR 이미지 3장으로부터 Exposure Fusion 알고리즘을 적용하여
     하나의 HDR 이미지 생성. 촬영부터 생성 결과 확인까지 가능한 안드로이드 애플리케이션 개발.
-  tags: [Exposure Fusion, HDR, Android]
+  stack: [Exposure Fusion, HDR, Android]
   links:
     code: ""
     demo: ""

@@ -1,12 +1,11 @@
 ---
 layout: default
-title: Portfolio
+title: Home
 ---
 
-<!-- PROFILE -->
-<section id="profile" class="hero">
-  <p class="eyebrow">PORTFOLIO 2026</p>
-  <h1>{{ site.name_ko }} <span class="name-en">/ {{ site.author | upcase }}</span></h1>
+<section class="hero">
+  <p class="eyebrow">{{ site.role }}</p>
+  <h1>{{ site.author }}</h1>
   <p class="lead">{{ site.tagline }}</p>
   <div class="hero-links">
     {% if site.email %}<a class="btn" href="mailto:{{ site.email }}">Email</a>{% endif %}
@@ -16,100 +15,41 @@ title: Portfolio
   </div>
 </section>
 
-<!-- 학력 -->
 <section>
-  <h2>학력</h2>
-  <div class="rows">
-    {% for e in site.data.education %}
-      <div class="row">
-        <div class="row-date">{{ e.period }}</div>
-        <div class="row-body"><strong>{{ e.school }}</strong> · {{ e.detail }}</div>
-      </div>
-    {% endfor %}
-  </div>
-</section>
-
-<!-- 어학 및 자격증 -->
-<section>
-  <h2>어학 및 자격증</h2>
-  <div class="rows">
-    {% for c in site.data.certifications %}
-      <div class="row">
-        <div class="row-date">{{ c.date }}</div>
-        <div class="row-body">
-          <strong>{{ c.name }}</strong>{% if c.issuer and c.issuer != "" %} · {{ c.issuer }}{% endif %}
-          {% if c.grade %}<span class="pill">{{ c.grade }}</span>{% endif %}
-        </div>
-      </div>
-    {% endfor %}
-  </div>
-</section>
-
-<!-- 대내외 활동 -->
-<section>
-  <h2>대내외 활동</h2>
-  <div class="cards">
-    {% for a in site.data.activities %}
-      <div class="card">
-        <div class="card-head">
-          <h3>{{ a.name }}</h3>
-          <span class="muted nowrap">{{ a.period }}</span>
-        </div>
-        <p>{{ a.detail }}</p>
-      </div>
-    {% endfor %}
-  </div>
-</section>
-
-<!-- 수상 내역 -->
-<section>
-  <h2>수상 내역</h2>
-  <div class="rows">
-    {% for w in site.data.awards %}
-      <div class="row">
-        <div class="row-date">{{ w.date }}</div>
-        <div class="row-body"><strong>{{ w.name }}</strong>{% if w.detail %} — <span class="muted">{{ w.detail }}</span>{% endif %}</div>
-      </div>
-    {% endfor %}
-  </div>
-</section>
-
-<!-- 프로젝트 -->
-<section id="projects">
-  <h2>대표 프로젝트</h2>
-  <div class="project-list">
-    {% for p in site.data.projects %}{% if p.featured %}
-      {% include project.html p=p feature=true %}
-    {% endif %}{% endfor %}
-  </div>
-
-  <h2 style="margin-top:2em">기타 프로젝트</h2>
-  <div class="cards two">
-    {% for p in site.data.projects %}{% unless p.featured %}
-      {% include project.html p=p feature=false %}
-    {% endunless %}{% endfor %}
-  </div>
-</section>
-
-<!-- Skills -->
-<section id="skills">
   <h2>Skills</h2>
   <div class="skills">
     {% for group in site.data.skills %}
       <div class="skill-group">
-        <div class="skill-group-head"><span class="chip">{{ group.group }}</span><span class="muted">{{ group.items | size }}</span></div>
-        {% for s in group.items %}
-          <div class="skill">
-            <div class="skill-top">
-              <span class="skill-name">{{ s.name }}</span>
-              <span class="stars" aria-label="{{ s.rating }} / 5">
-                {% for i in (1..5) %}<span class="star{% if i <= s.rating %} on{% endif %}">★</span>{% endfor %}
-              </span>
-            </div>
-            {% if s.desc and s.desc != "" %}<div class="skill-desc">{{ s.desc }}</div>{% endif %}
-          </div>
-        {% endfor %}
+        <h3>{{ group.group }}</h3>
+        <div class="tags">
+          {% for item in group.items %}<span class="tag">{{ item }}</span>{% endfor %}
+        </div>
       </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section>
+  <div class="section-head">
+    <h2>Featured projects</h2>
+    <a href="{{ '/projects/' | relative_url }}">All projects →</a>
+  </div>
+  <div class="projects">
+    {% for project in site.data.projects %}
+      {% if project.featured %}
+        <div class="card">
+          <h3>{{ project.name }}</h3>
+          {% if project.period or project.org %}<p class="card-meta">{{ project.period }}{% if project.period and project.org %} · {% endif %}{{ project.org }}</p>{% endif %}
+          <p>{{ project.summary }}</p>
+          <div class="tags">
+            {% for t in project.stack %}<span class="tag">{{ t }}</span>{% endfor %}
+          </div>
+          <div class="card-links">
+            {% if project.links.code and project.links.code != "" %}<a href="{{ project.links.code }}">Code ↗</a>{% endif %}
+            {% if project.links.demo and project.links.demo != "" %}<a href="{{ project.links.demo }}">Demo ↗</a>{% endif %}
+          </div>
+        </div>
+      {% endif %}
     {% endfor %}
   </div>
 </section>

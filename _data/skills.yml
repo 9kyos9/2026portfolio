@@ -1,31 +1,12 @@
-# Skills — 카테고리별, 별점(rating 1-5)과 설명.
-- group: 프로그래밍 언어
-  items:
-    - { name: Python,  rating: 5, desc: "" }
-    - { name: C,       rating: 5, desc: "" }
-    - { name: SQL,     rating: 3, desc: 데이터 조회 및 가공 }
-    - { name: MATLAB,  rating: 5, desc: 수치 계산 및 알고리즘 구현 }
+# Grouped skills shown on the home page. Edit freely.
+- group: Machine Learning / AI
+  items: [PyTorch, TensorFlow, Hugging Face, scikit-learn, LangChain, RAG, Fine-tuning]
 
-- group: 라이브러리
-  items:
-    - { name: Pandas,       rating: 5, desc: 데이터 전처리 }
-    - { name: Numpy,        rating: 5, desc: 데이터 전처리 }
-    - { name: Scikit-learn, rating: 5, desc: 머신러닝 모델 구현 및 평가 }
-    - { name: Networkx,     rating: 4, desc: 그래프 기반 데이터 모델링 및 네트워크 분석 }
-    - { name: Matplotlib,   rating: 5, desc: 데이터 시각화 및 분석 결과 표현 }
+- group: LLM / NLP
+  items: [Prompt Engineering, Vector DBs, Embeddings, LlamaIndex, OpenAI API, vLLM]
 
-- group: 프레임워크
-  items:
-    - { name: PyTorch,    rating: 5, desc: 딥러닝 모델 구축 및 학습 }
-    - { name: TensorFlow, rating: 5, desc: 딥러닝 모델 구축 및 학습 }
-    - { name: OpenCV,     rating: 5, desc: 영상 처리 및 컴퓨터 비전 }
-    - { name: Langchain,  rating: 3, desc: LLM 기반 애플리케이션 및 RAG 시스템 구축 }
+- group: Data
+  items: [Python, SQL, Pandas, NumPy, Spark, Airflow]
 
-- group: Tool
-  items:
-    - { name: JupyterNotebook, rating: 5, desc: 데이터 분석 및 모델 실험 수행 }
-    - { name: Git,             rating: 5, desc: 프로젝트 버전관리 }
-    - { name: Notion,          rating: 5, desc: 프로젝트 일정 관리 및 문서화 }
-    - { name: QGIS,            rating: 3, desc: 지도 기반 데이터 시각화 및 시뮬레이션 }
-    - { name: Tableau,         rating: 3, desc: 시각화, 대시보드 작성 }
-    - { name: ChatGPT,         rating: 5, desc: AI 활용, 가설 검증 }
+- group: Infra / MLOps
+  items: [Docker, AWS, GCP, FastAPI, MLflow, Git, CI/CD]
