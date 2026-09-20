@@ -21,7 +21,7 @@
   links:
     code: ""
     demo: ""
-  featured: false
+  featured: true
 
 - name: AI 피트니스 트레이너
   period: 2023.10 – 2023.12
@@ -33,7 +33,7 @@
   links:
     code: ""
     demo: ""
-  featured: false
+  featured: true
 
 - name: "취도우복싱: AI 면접 준비 서비스"
   period: 2023.03 – 2023.04
