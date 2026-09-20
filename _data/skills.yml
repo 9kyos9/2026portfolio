@@ -1,12 +1,12 @@
-# Grouped skills shown on the home page. Edit freely.
-- group: Machine Learning / AI
-  items: [PyTorch, TensorFlow, Hugging Face, scikit-learn, LangChain, RAG, Fine-tuning]
+# 홈에 표시되는 기술 스택 (카테고리별)
+- group: 프로그래밍 언어
+  items: [Python, C, SQL, MATLAB]
 
-- group: LLM / NLP
-  items: [Prompt Engineering, Vector DBs, Embeddings, LlamaIndex, OpenAI API, vLLM]
+- group: 라이브러리
+  items: [Pandas, Numpy, Scikit-learn, Networkx, Matplotlib]
 
-- group: Data
-  items: [Python, SQL, Pandas, NumPy, Spark, Airflow]
+- group: 프레임워크
+  items: [PyTorch, TensorFlow, OpenCV, Langchain]
 
-- group: Infra / MLOps
-  items: [Docker, AWS, GCP, FastAPI, MLflow, Git, CI/CD]
+- group: 툴
+  items: [Jupyter Notebook, Git, Notion, QGIS, Tableau, ChatGPT]

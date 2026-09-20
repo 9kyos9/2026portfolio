@@ -1,31 +1,27 @@
-# Site settings
-title: Eunkyo Kim
-role: AI Engineer
-tagline: >-
-  AI Engineer building LLM-powered products and ML systems — from data
-  pipelines to production inference.
-description: >-
-  Portfolio of Eunkyo Kim, an AI Engineer specializing in LLMs, machine
-  learning systems, and applied deep learning.
-author: Eunkyo Kim
+# 사이트 설정
+title: 김은교
+role: AI 엔지니어
+tagline: 데이터와 AI 모델링을 통해 실질적인 가치를 도출하는 길을 탐구합니다.
+description: 김은교(Eunkyo Kim) 포트폴리오 2026 — 데이터와 AI 모델링.
+author: 김은교
+
+# 연락처 / 링크 (전화번호는 제외)
 email: kyokim994@gmail.com
-
-# Contact / links (leave blank to hide)
 github_username: 9kyos9
-linkedin_username: ""      # e.g. eunkyo-kim
-resume_url: ""             # e.g. /assets/resume.pdf
+linkedin_username: eunkyokim
+resume_url: ""
 
-# On GitHub Pages the site is served at https://9kyos9.github.io/2026portfolio
+# GitHub Pages 주소: https://9kyos9.github.io/2026portfolio
 url: "https://9kyos9.github.io"
 baseurl: "/2026portfolio"
 
-# Navigation
+# 네비게이션
 nav:
-  - title: Home
+  - title: 홈
     url: /
-  - title: Projects
+  - title: 프로젝트
     url: /projects/
-  - title: About
+  - title: 소개
     url: /about/
 
 # Jekyll

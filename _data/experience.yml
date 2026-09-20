@@ -1,15 +1,54 @@
-# Work + education timeline. Newest first.
-work:
-  - role: AI Engineer Intern
-    org: Company Name
-    period: 2025
-    points:
-      - Built and shipped an LLM feature used by internal teams.
-      - Improved model inference latency through batching and caching.
-
+# 소개 페이지에 표시되는 학력 / 대내외 활동 (최신순)
 education:
-  - degree: B.S. in Computer Science (or your major)
-    org: University Name
-    period: 2020 – 2026
-    points:
-      - Relevant coursework: Machine Learning, Deep Learning, Data Structures.
+  - degree: Advanced Computing MSc 졸업
+    org: King's College London
+    period: 2024.09 – 2026.01
+  - degree: 멀티미디어공학과 졸업
+    org: 동국대학교 서울캠퍼스
+    period: 2018.03 – 2023.08
+  - degree: 졸업
+    org: 한가람고등학교
+    period: 2015.03 – 2018.02
+
+activities:
+  - name: LG Aimers 9기
+    period: 2026.06 – 현재
+    detail: NLP·LLM 중심 AI 교육 이수 및 온라인 해커톤(예정) 참여
+  - name: BDAI 빅데이터 연합학회
+    period: 2025.11 – 2026.06
+    detail: 학회 11기·12기 학회원 / 데이터 관련 강의·세미나 수강
+  - name: 미래내일 일경험 프로젝트형 · 한국 오라클
+    period: 2025.11 – 2026.01
+    detail: >-
+      '공공데이터로 도시문제 해결하기' 과제를 '계절기반 저탄소 도보 관광 경로 추천 서비스'
+      주제로 수행 / 우수 프로젝트 선정
+  - name: 코드클럽 찾아가는 SW 교육기부단
+    period: 2024.04 – 2024.07
+    detail: 초등학생 대상 프로그래밍 기초 이론 및 스크래치 실습 커리큘럼 계획·진행
+  - name: Microsoft AI School 3기
+    period: 2023.06 – 2023.12
+    detail: SW·데이터·AI 교육 및 팀 프로젝트 수행을 통한 AI 직무 역량 강화
+  - name: 동국대학교 멀티미디어공학과 학생회
+    period: 2018.03 – 2019.12 / 2021.01 – 2021.12
+    detail: 학생회장(2021)·홍보국장(2019)·행사국원(2018). 학과 운영 및 행사 기획·진행, SNS 관리
+
+awards:
+  - date: 2026.01
+    name: 데이콘 K리그·서울시립대 공개 AI 경진대회 4위
+    detail: 리더보드 상위 1%
+  - date: 2026.01
+    name: 미래내일 일경험 프로젝트 우수프로젝트상
+    detail: 계절기반 저탄소 관광경로 추천 서비스 (Ko-ROOT)
+  - date: 2018.07
+    name: 동국대학교 제5회 영어발표 경진대회
+    detail: 주제 — K컬처 소개
+
+certifications:
+  - date: 2026.03
+    name: ADsP (한국데이터산업진흥원)
+  - date: 2025.12
+    name: SQLD (한국데이터산업진흥원)
+  - date: 2025.11
+    name: OPIc — IH
+  - date: 2024.05
+    name: IELTS — 7.0 (영국문화원)
