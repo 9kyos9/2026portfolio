@@ -1,14 +1,40 @@
-- name: Project One
-  description: A short one-line description of what this project is and why it matters.
-  url: "#"
-  tags: [Web, TypeScript]
+# AI/ML projects. Each becomes a card + detail block.
+# Keep the problem -> approach -> result structure: recruiters scan for impact.
+- name: RAG-based Document QA Assistant
+  summary: A retrieval-augmented chatbot that answers questions over private docs.
+  problem: Teams waste hours searching internal documents for answers.
+  approach: >-
+    Built an end-to-end RAG pipeline — chunking, embeddings, and a vector
+    store — served through a FastAPI backend with an LLM for grounded answers.
+  result: Reduced average lookup time from ~10 min to under 30 sec in testing.
+  stack: [Python, LangChain, FAISS, OpenAI API, FastAPI]
+  links:
+    code: "https://github.com/9kyos9"
+    demo: ""
+  featured: true
 
-- name: Project Two
-  description: Another project — replace this with your own work, links, and details.
-  url: "#"
-  tags: [Design, React]
+- name: Image Classification Model
+  summary: A CNN trained to classify images with a clean training pipeline.
+  problem: Manual sorting of image data was slow and inconsistent.
+  approach: >-
+    Fine-tuned a pretrained CNN with data augmentation and tracked experiments
+    with MLflow; exposed the model via a REST endpoint.
+  result: Reached 94% validation accuracy and cut labeling effort noticeably.
+  stack: [PyTorch, scikit-learn, MLflow, Docker]
+  links:
+    code: "https://github.com/9kyos9"
+    demo: ""
+  featured: true
 
-- name: Project Three
-  description: A third example card. Add or remove entries in _data/projects.yml.
-  url: "#"
-  tags: [Research]
+- name: Data Pipeline for ML Training
+  summary: An automated pipeline that cleans and prepares data for training.
+  problem: Model training kept breaking on inconsistent, messy source data.
+  approach: >-
+    Built a scheduled ETL pipeline with validation checks and versioned
+    datasets so training runs are reproducible.
+  result: Made training runs reproducible and removed manual prep steps.
+  stack: [Python, Airflow, Pandas, SQL]
+  links:
+    code: "https://github.com/9kyos9"
+    demo: ""
+  featured: false

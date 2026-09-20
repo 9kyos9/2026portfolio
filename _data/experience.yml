@@ -1,0 +1,15 @@
+# Work + education timeline. Newest first.
+work:
+  - role: AI Engineer Intern
+    org: Company Name
+    period: 2025
+    points:
+      - Built and shipped an LLM feature used by internal teams.
+      - Improved model inference latency through batching and caching.
+
+education:
+  - degree: B.S. in Computer Science (or your major)
+    org: University Name
+    period: 2020 – 2026
+    points:
+      - Relevant coursework: Machine Learning, Deep Learning, Data Structures.

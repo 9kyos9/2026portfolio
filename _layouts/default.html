@@ -26,9 +26,11 @@
   <footer class="site-footer">
     <div class="wrap">
       <span>© {{ site.time | date: '%Y' }} {{ site.author }}</span>
-      {% if site.github_username %}
-        <a href="https://github.com/{{ site.github_username }}">GitHub</a>
-      {% endif %}
+      <span class="footer-links">
+        {% if site.email %}<a href="mailto:{{ site.email }}">Email</a>{% endif %}
+        {% if site.github_username %}<a href="https://github.com/{{ site.github_username }}">GitHub</a>{% endif %}
+        {% if site.linkedin_username and site.linkedin_username != "" %}<a href="https://www.linkedin.com/in/{{ site.linkedin_username }}">LinkedIn</a>{% endif %}
+      </span>
     </div>
   </footer>
 </body>

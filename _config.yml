@@ -1,18 +1,23 @@
 # Site settings
 title: Eunkyo Kim
-tagline: Portfolio 2026
+role: AI Engineer
+tagline: >-
+  AI Engineer building LLM-powered products and ML systems — from data
+  pipelines to production inference.
 description: >-
-  Personal portfolio of Eunkyo Kim — projects, work, and things I build.
+  Portfolio of Eunkyo Kim, an AI Engineer specializing in LLMs, machine
+  learning systems, and applied deep learning.
 author: Eunkyo Kim
 email: kyokim994@gmail.com
 
-# Build settings
+# Contact / links (leave blank to hide)
+github_username: 9kyos9
+linkedin_username: ""      # e.g. eunkyo-kim
+resume_url: ""             # e.g. /assets/resume.pdf
+
 # On GitHub Pages the site is served at https://9kyos9.github.io/2026portfolio
 url: "https://9kyos9.github.io"
 baseurl: "/2026portfolio"
-
-# Social / links (leave blank to hide)
-github_username: 9kyos9
 
 # Navigation
 nav:
