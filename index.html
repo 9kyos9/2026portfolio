@@ -139,6 +139,9 @@ title: 포트폴리오
     <p class="section-label">Contact</p>
     <h2 class="contact-title">함께 만들 문제가<br><span class="dim">있으신가요?</span></h2>
     <p class="contact-sub">새로운 팀, 프로젝트, 함께 고민하고 싶은 문제 — 편하게 연락 주세요.</p>
-    {% if site.github_username %}<a class="btn" href="https://github.com/{{ site.github_username }}">GitHub 방문하기</a>{% endif %}
+    <div class="hero-cta">
+      {% if site.email %}<a class="btn" href="mailto:{{ site.email }}">Email 보내기</a>{% endif %}
+      {% if site.github_username %}<a class="btn-text" href="https://github.com/{{ site.github_username }}">GitHub 방문하기 ›</a>{% endif %}
+    </div>
   </div>
 </section>
