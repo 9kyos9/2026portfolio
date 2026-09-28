@@ -11,6 +11,7 @@
   --accent: #4da3ff;
   --btn-bg: #f5f5f7;
   --btn-fg: #0a0a0b;
+  --link-grey: #9aa0aa;
   --max: 1080px;
 }
 :root[data-theme="light"] {
@@ -25,6 +26,7 @@
   --accent: #2563eb;
   --btn-bg: #0a0a0b;
   --btn-fg: #ffffff;
+  --link-grey: #4b5563;
 }
 
 * { box-sizing: border-box; }
@@ -155,7 +157,7 @@ main { display: block; }
   border-radius: 8px; padding: 4px 10px; background: transparent;
 }
 .work-links { display: flex; justify-content: flex-end; gap: 18px; margin-top: auto; padding-top: 20px; }
-.work-link { color: var(--accent); font-size: 0.9rem; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.work-link { color: var(--link-grey); font-size: 0.9rem; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 .work-link:hover { text-decoration-thickness: 2px; }
 .work-more { margin-top: 26px; color: var(--muted); font-size: 0.95rem; }
 .work-more strong { color: var(--fg); font-weight: 600; }
