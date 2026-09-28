@@ -67,6 +67,12 @@ title: 포트폴리오
           <div class="meta">{{ p.period }}</div>
           <p>{{ p.summary }}</p>
           <div class="tags">{% for t in p.stack %}<span class="tag">{{ t }}</span>{% endfor %}</div>
+          {% if p.links.code != "" or p.links.demo != "" %}
+          <div class="work-links">
+            {% if p.links.code != "" %}<a class="work-link" href="{{ p.links.code }}">GitHub ↗</a>{% endif %}
+            {% if p.links.demo != "" %}<a class="work-link" href="{{ p.links.demo }}">Demo ↗</a>{% endif %}
+          </div>
+          {% endif %}
         </article>
       {% endif %}{% endfor %}
     </div>

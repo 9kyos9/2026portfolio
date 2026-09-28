@@ -153,6 +153,9 @@ main { display: block; }
   font-size: 0.78rem; color: var(--fg); border: 1px solid var(--border);
   border-radius: 8px; padding: 4px 10px; background: transparent;
 }
+.work-links { display: flex; gap: 18px; margin-top: 18px; }
+.work-link { color: var(--accent); font-size: 0.9rem; font-weight: 600; }
+.work-link:hover { text-decoration: underline; }
 .work-more { margin-top: 26px; color: var(--muted); font-size: 0.95rem; }
 .work-more strong { color: var(--fg); font-weight: 600; }
 

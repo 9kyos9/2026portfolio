@@ -7,7 +7,7 @@
     Hard Voting 앙상블을 적용하여 알츠하이머병(AD)과 정상(NC)을 분류하는 모델 개발.
   stack: [의료데이터, GCN, 앙상블메소드]
   links:
-    code: ""
+    code: "https://github.com/9kyos9/rsfMRI_GNN"
     demo: ""
   featured: true
 
