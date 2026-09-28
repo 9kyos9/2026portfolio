@@ -16,10 +16,14 @@ baseurl: "/2026portfolio"
 nav:
   - title: Values
     url: "#values"
-  - title: 프로젝트
-    url: "#projects"
+  - title: Journey
+    url: "#journey"
+  - title: Work
+    url: "#work"
   - title: Skills
     url: "#skills"
+  - title: Contact
+    url: "#contact"
 
 # Jekyll
 markdown: kramdown

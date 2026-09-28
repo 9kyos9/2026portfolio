@@ -1,37 +1,65 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.title %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
   {% seo %}
+  <script>
+    // Apply saved theme before paint (default dark)
+    (function () {
+      try {
+        var t = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <a class="brand" href="{{ '/' | relative_url }}">
+        <span class="avatar">김</span>
+        <span>{{ site.title }}</span>
+      </a>
       <nav class="site-nav">
-        {% for item in site.nav %}
-          <a href="{{ item.url | relative_url }}"{% if page.url == item.url %} class="active"{% endif %}>{{ item.title }}</a>
-        {% endfor %}
+        {% for item in site.nav %}<a href="{{ item.url }}">{{ item.title }}</a>{% endfor %}
       </nav>
+      <div class="header-right">
+        <button class="icon-btn" id="theme-toggle" aria-label="테마 전환" title="테마 전환">☾</button>
+        {% if site.github_username %}<a class="pill-btn" href="https://github.com/{{ site.github_username }}">GitHub</a>{% endif %}
+      </div>
     </div>
   </header>
 
-  <main class="wrap">
+  <main>
     {{ content }}
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
       <span>© {{ site.time | date: '%Y' }} {{ site.author }}</span>
-      <span class="footer-links">
-        {% if site.email %}<a href="mailto:{{ site.email }}">Email</a>{% endif %}
-        {% if site.github_username %}<a href="https://github.com/{{ site.github_username }}">GitHub</a>{% endif %}
-        {% if site.linkedin_username and site.linkedin_username != "" %}<a href="https://www.linkedin.com/in/{{ site.linkedin_username }}">LinkedIn</a>{% endif %}
-      </span>
+      {% if site.github_username %}<a class="link" href="https://github.com/{{ site.github_username }}">GitHub ↗</a>{% endif %}
     </div>
   </footer>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('theme-toggle');
+      var root = document.documentElement;
+      function sync() { btn.textContent = root.getAttribute('data-theme') === 'light' ? '☀' : '☾'; }
+      sync();
+      btn.addEventListener('click', function () {
+        var next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+        sync();
+      });
+    })();
+  </script>
 </body>
 </html>

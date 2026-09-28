@@ -1,0 +1,31 @@
+# 여정 타임라인 (오래된 → 최신)
+- year: 2018 – 2023
+  phase: 기초
+  title: 멀티미디어공학
+  org: 동국대학교
+  detail: 프로그래밍과 영상 처리의 기반을 다지고, 학생회 활동으로 협업과 실행력을 익혔습니다.
+
+- year: 2023
+  phase: 전환
+  title: AI 부트캠프
+  org: Microsoft AI School 3기
+  detail: SW·데이터·AI 교육과 팀 프로젝트를 통해 AI 직무 역량을 본격적으로 쌓았습니다.
+
+- year: 2024 – 2026
+  phase: 심화
+  title: Advanced Computing MSc
+  org: King's College London
+  detail: 그래프 기반 딥러닝을 비롯한 AI를 깊이 있게 연구하고 석사 학위를 취득했습니다.
+
+- year: 2025 – 2026
+  phase: 실전
+  title: 데이터 프로젝트·학회
+  org: 한국 오라클 · BDAI
+  detail: 공공데이터 문제 해결 프로젝트로 우수상을 받고, 데이터 학회에서 꾸준히 학습했습니다.
+
+- year: 2026 –
+  phase: 지금
+  title: AI 엔지니어로
+  org: LG Aimers 9기
+  detail: NLP·LLM 중심으로 실무형 AI 역량을 확장하며 다음 단계를 준비하고 있습니다.
+  highlight: true

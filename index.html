@@ -3,65 +3,142 @@ layout: default
 title: 포트폴리오
 ---
 
-<!-- 이름 -->
-<section class="hero">
-  <p class="eyebrow">{{ site.role }}</p>
-  <h1>{{ site.author }}</h1>
-  <p class="lead">{{ site.tagline }}</p>
-  <div class="hero-links">
-    {% if site.github_username %}<a class="btn ghost" href="https://github.com/{{ site.github_username }}">GitHub</a>{% endif %}
+<!-- ===== Hero ===== -->
+<section class="hero wrap">
+  <p class="hero-eyebrow">{{ site.author }} · Eunkyo Kim</p>
+  <h1>데이터로 문제를<br>푸는 AI 엔지니어.</h1>
+  <p class="hero-sub">{{ site.tagline }}</p>
+  <div class="hero-cta">
+    <a class="btn" href="#work">프로젝트 보기</a>
+    {% if site.github_username %}<a class="btn-text" href="https://github.com/{{ site.github_username }}">GitHub 보기 ›</a>{% endif %}
   </div>
+  <p class="hero-foot">AI · Machine Learning · Data — Advanced Computing MSc, King's College London</p>
 </section>
 
-<!-- 3 Values -->
-<section id="values">
-  <h2>Values</h2>
-  <div class="values">
-    {% for v in site.data.values %}
-      <div class="value">
-        <h3>{{ v.title }}</h3>
-        <p>{{ v.detail }}</p>
-      </div>
-    {% endfor %}
-  </div>
-</section>
-
-<!-- 대표 프로젝트 -->
-<section id="projects">
-  <h2>대표 프로젝트</h2>
-  <div class="projects">
-    {% for project in site.data.projects %}
-      {% if project.featured %}
-        <div class="card">
-          <h3>{{ project.name }}</h3>
-          {% if project.period or project.org %}<p class="card-meta">{{ project.period }}{% if project.period and project.org %} · {% endif %}{{ project.org }}</p>{% endif %}
-          <p>{{ project.summary }}</p>
-          <div class="tags">
-            {% for t in project.stack %}<span class="tag">{{ t }}</span>{% endfor %}
-          </div>
-          {% if project.links.code != "" or project.links.demo != "" %}
-          <div class="card-links">
-            {% if project.links.code != "" %}<a href="{{ project.links.code }}">Code ↗</a>{% endif %}
-            {% if project.links.demo != "" %}<a href="{{ project.links.demo }}">Demo ↗</a>{% endif %}
-          </div>
-          {% endif %}
+<!-- ===== Values ===== -->
+<section class="section" id="values">
+  <div class="wrap">
+    <p class="section-label">Values</p>
+    <h2 class="section-title">일하는 방식을 만드는<br><span class="dim">세 가지 태도.</span></h2>
+    <p class="section-intro">기술보다 먼저, 문제를 대하는 태도가 결과를 만든다고 믿습니다.</p>
+    <div class="grid-3">
+      {% for v in site.data.values %}
+        <div class="num-card">
+          <span class="num">0{{ forloop.index }}</span>
+          <h3>{{ v.title }}</h3>
+          <p>{{ v.detail }}</p>
         </div>
-      {% endif %}
-    {% endfor %}
+      {% endfor %}
+    </div>
   </div>
 </section>
 
-<!-- Skills -->
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="skills">
-    {% for group in site.data.skills %}
-      <div class="skill-group">
-        <h3>{{ group.group }}</h3>
-        <div class="tags">
-          {% for item in group.items %}<span class="tag">{{ item }}</span>{% endfor %}
+<!-- ===== Journey ===== -->
+<section class="section" id="journey">
+  <div class="wrap">
+    <p class="section-label">Journey</p>
+    <h2 class="section-title">배우고, 만들고,<br><span class="dim">증명해왔습니다.</span></h2>
+    <p class="section-intro">도메인을 이해하는 데서 시작해, 직접 만드는 엔지니어로 성장해 왔습니다.</p>
+    <div class="timeline">
+      {% for j in site.data.journey %}
+        <div class="tl-item{% if j.highlight %} on{% endif %}">
+          <div class="tl-year">{{ j.year }}</div>
+          <div class="tl-phase">{{ j.phase }}</div>
+          <div class="tl-role">{{ j.title }}</div>
+          <div class="tl-org">{{ j.org }}</div>
+          <div class="tl-detail">{{ j.detail }}</div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ===== Work ===== -->
+<section class="section" id="work">
+  <div class="wrap">
+    <p class="section-label">Work</p>
+    <h2 class="section-title">코드로 증명합니다.<br><span class="dim">문제부터 배포까지.</span></h2>
+    <p class="section-intro">문제 정의, 모델링, 구현까지 직접 수행한 대표 프로젝트입니다.</p>
+    <div class="cards-2">
+      {% for p in site.data.projects %}{% if p.featured %}
+        <article class="work-card">
+          <div class="kicker">{{ p.org }}</div>
+          <h3>{{ p.name }}</h3>
+          <div class="meta">{{ p.period }}</div>
+          <p>{{ p.summary }}</p>
+          <div class="tags">{% for t in p.stack %}<span class="tag">{{ t }}</span>{% endfor %}</div>
+        </article>
+      {% endif %}{% endfor %}
+    </div>
+    {% assign others = site.data.projects | where: "featured", false %}
+    {% if others.size > 0 %}
+      <p class="work-more"><strong>그 외 프로젝트</strong> — {% for p in others %}{{ p.name }}{% unless forloop.last %} · {% endunless %}{% endfor %}</p>
+    {% endif %}
+  </div>
+</section>
+
+<!-- ===== Skills / Credentials ===== -->
+<section class="section" id="skills">
+  <div class="wrap">
+    <p class="section-label">Skills</p>
+    <h2 class="section-title">레이어마다 다룹니다.<br><span class="dim">데이터부터 모델까지.</span></h2>
+    <p class="section-intro">분석 파이프라인부터 딥러닝·LLM까지 전 과정을 다룹니다.</p>
+
+    <div class="toolkit">
+      {% for group in site.data.skills %}
+        <div class="tk-group">
+          <div class="tk-label">{{ group.group }}</div>
+          <div class="tags">{% for item in group.items %}<span class="tag">{{ item }}</span>{% endfor %}</div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="cred-grid">
+      <div>
+        <h3 class="sub-head">학력</h3>
+        {% for ed in site.data.experience.education %}
+          <div class="edu-item">
+            <div class="e-top"><span class="e-org">{{ ed.org }}</span><span class="e-year">{{ ed.period }}</span></div>
+            <div class="e-degree">{{ ed.degree }}</div>
+          </div>
+        {% endfor %}
+
+        <h3 class="sub-head" style="margin-top:40px">어학 · 자격증</h3>
+        <div class="list-rows">
+          {% for c in site.data.experience.certifications %}
+            <div class="list-row"><span class="lr-main">{{ c.name }}</span><span class="lr-side">{{ c.date }}</span></div>
+          {% endfor %}
         </div>
       </div>
-    {% endfor %}
+
+      <div>
+        <h3 class="sub-head">수상 내역</h3>
+        <div class="list-rows">
+          {% for w in site.data.experience.awards %}
+            <div class="list-row">
+              <span class="lr-main">{{ w.name }}{% if w.detail %}<br><span class="muted" style="font-size:0.85rem">{{ w.detail }}</span>{% endif %}</span>
+              <span class="lr-side">{{ w.date }}</span>
+            </div>
+          {% endfor %}
+        </div>
+
+        <h3 class="sub-head" style="margin-top:40px">대내외 활동</h3>
+        <div class="list-rows">
+          {% for a in site.data.experience.activities %}
+            <div class="list-row"><span class="lr-main">{{ a.name }}</span><span class="lr-side">{{ a.period }}</span></div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Contact ===== -->
+<section class="section" id="contact">
+  <div class="wrap">
+    <p class="section-label">Contact</p>
+    <h2 class="contact-title">함께 만들 문제가<br><span class="dim">있으신가요?</span></h2>
+    <p class="contact-sub">새로운 팀, 프로젝트, 함께 고민하고 싶은 문제 — 편하게 연락 주세요.</p>
+    {% if site.github_username %}<a class="btn" href="https://github.com/{{ site.github_username }}">GitHub 방문하기</a>{% endif %}
   </div>
 </section>
