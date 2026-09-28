@@ -11,6 +11,18 @@
     demo: ""
   featured: true
 
+- name: "Ko-ROOT: 계절기반 저탄소 관광 경로 추천 서비스"
+  period: 2025.11 – 2026.01
+  org: 미래내일 일경험 · 한국 오라클
+  summary: >-
+    공공데이터를 활용해 계절 기반 저탄소 도보 관광 경로를 추천하는 서비스. '공공데이터로
+    도시문제 해결하기' 과제로 수행하여 우수 프로젝트로 선정되었습니다.
+  stack: [공공데이터, 경로 추천, QGIS]
+  links:
+    code: "https://github.com/9kyos9/ROOT_Project"
+    demo: ""
+  featured: true
+
 - name: RAG 기반 소득세 문의 챗봇
   period: 2025.10 – 2025.12
   org: 개인 프로젝트
@@ -31,7 +43,7 @@
     6가지 운동 자세 선택부터 카메라 촬영, 피드백 음성 제공까지 수행하는 React 기반 웹 개발.
   stack: [YOLOv8, Pose Estimation, React]
   links:
-    code: ""
+    code: "https://github.com/msai-cereal/ai_fitness_trainer_v2"
     demo: ""
   featured: true
 
