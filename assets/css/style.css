@@ -140,6 +140,7 @@ main { display: block; }
 /* ===== Work (projects) ===== */
 .cards-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .work-card {
+  display: flex; flex-direction: column;
   border: 1px solid var(--border); background: var(--card);
   border-radius: 20px; padding: 34px 32px; transition: background 0.15s ease, transform 0.15s ease;
 }
@@ -153,7 +154,7 @@ main { display: block; }
   font-size: 0.78rem; color: var(--fg); border: 1px solid var(--border);
   border-radius: 8px; padding: 4px 10px; background: transparent;
 }
-.work-links { display: flex; justify-content: flex-end; gap: 18px; margin-top: 18px; }
+.work-links { display: flex; justify-content: flex-end; gap: 18px; margin-top: auto; padding-top: 20px; }
 .work-link { color: var(--accent); font-size: 0.9rem; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 .work-link:hover { text-decoration-thickness: 2px; }
 .work-more { margin-top: 26px; color: var(--muted); font-size: 0.95rem; }
